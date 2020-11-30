@@ -113,4 +113,4 @@ LIMIT 5;
 ```
 |name |count|
 |-----|-----|
-|Elena|463  |
+|Elena|1  |
