@@ -30,8 +30,8 @@ The kind ad-hoc queries and aggregations described above can best be realized by
 
 | Column   | Data type | Comment |
 | -------  | --------- | ------- |
-| song_id  | varchar   |         |
-| title    | varchar   |         |
+| song_id  | varchar   | primary key |
+| title    | varchar   | not null |
 | artist_id| varchar   |         |
 | year     | int       |         |
 | duration | numeric   |         |
@@ -41,8 +41,8 @@ The kind ad-hoc queries and aggregations described above can best be realized by
 
 | Column   | Data type | Comment |
 | -------  | --------- | ------- |
-| artist_id| varchar   |         |
-| name     | varchar   |         |
+| artist_id| varchar   | primary key |
+| name     | varchar   | not null |
 | location | varchar   |         |
 | latitude | numeric   |         |
 | longitude| numeric   |         |
@@ -51,7 +51,7 @@ The kind ad-hoc queries and aggregations described above can best be realized by
 
 | Column    | Data type | Comment |
 | -------   | --------- | ------- |
-| user_id   | int       |         |
+| user_id   | int       | primary key |
 | first_name| varchar   |         |
 | last_name | varchar   |         |
 | gender    | varchar   | 'M' or 'F'|
@@ -61,7 +61,7 @@ The kind ad-hoc queries and aggregations described above can best be realized by
 
 | Column     | Data type | Comment |
 | -------    | --------- | ------- |
-| start_time | timestamp |         |
+| start_time | timestamp | primary key |
 | hour       | int       |         |
 | day        | int       |         |
 | week       | int       |         |
@@ -73,9 +73,9 @@ The kind ad-hoc queries and aggregations described above can best be realized by
 
 | Column      | Data type | Comment |
 | -------     | --------- | ------- |
-| songplay_id | int       | auto inc|
-| start_time  | timestamp | links to *time* table|
-| user_id     | int       | links to *users* table |
+| songplay_id | int       | auto inc, primary key|
+| start_time  | timestamp | links to *time* table, not null|
+| user_id     | int       | links to *users* table, not null |
 | song_id     | varchar   | links to *songs* table |
 | artist_id   | varchar   | links to *artists* table |
 | session_id  | int       |         |
@@ -113,4 +113,4 @@ LIMIT 5;
 ```
 |name |count|
 |-----|-----|
-|Elena|463  |
+|Elena|1  |
