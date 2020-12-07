@@ -9,7 +9,7 @@ def load_staging_tables(cur, conn):
     
     Arguments:
         cur: the database connection cursor
-        filepath: the path to the song file
+        conn: the database connection
     """
     for query in copy_table_queries:
         cur.execute(query)
@@ -22,7 +22,7 @@ def insert_tables(cur, conn):
     
     Arguments:
         cur: the database connection cursor
-        filepath: the path to the song file
+        conn: the database connection
     """
     for query in insert_table_queries:
         cur.execute(query)
