@@ -4,12 +4,26 @@ from sql_queries import create_table_queries, drop_table_queries
 
 
 def drop_tables(cur, conn):
+    """
+    Description: Drops all tables from the schema
+    
+    Arguments:
+        cur: the database connection cursor
+        conn: the database connection
+    """    
     for query in drop_table_queries:
         cur.execute(query)
         conn.commit()
 
 
 def create_tables(cur, conn):
+    """
+    Description: Creates database schema
+    
+    Arguments:
+        cur: the database connection cursor
+        conn: the database connection
+    """  
     for query in create_table_queries:
         cur.execute(query)
         conn.commit()
