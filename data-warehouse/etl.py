@@ -17,7 +17,7 @@ def load_staging_tables(cur, conn):
 
 
 def insert_tables(cur, conn):
-        """
+    """
     Description: This function loads the data from the staging area into the star schema.
     
     Arguments:
